@@ -1,0 +1,10 @@
+Trader Performance vs Market Sentiment — Summary
+This analysis examined the relationship between market sentiment (Fear/Greed Index) and trader behavior and performance on Hyperliquid. I utilized two sets of data: daily sentiment data and historical trade data.
+First, I cleaned the data, corrected the timestamps, and eliminated duplicates. Next, I aggregated the trades by trader on a daily basis to filter out noise and reflect actual decision-making patterns. For each trader on a daily basis, I computed daily PnL, win rate, number of trades, average trade size, and long/short ratio. This was then combined with daily sentiment labels.
+Additionally, I included basic features based on trader history, such as past PnL, rolling win rate, and PnL volatility. A Random Forest classifier was employed to determine whether a trader’s day was above or below the median level of profitability.
+
+Insights
+The sentiment influenced the actions of the traders more than the amount they made. On Greed days, the traders made more trades and bigger trades, but the profits were not directly proportional. The high-frequency traders underperformed on most days, which indicated that overtrading is detrimental to profits. The recent performance of a trader was the best predictor of future performance, which indicated that consistency is more important than market sentiment.
+
+Strategy Recommendations
+During Greed phases, traders must manage risk and avoid over-sized positions. During Fear phases, fewer high-quality trades are preferable to reactive trading. Capital must favor steady traders over aggressive and high-frequency traders.
